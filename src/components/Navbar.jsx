@@ -67,7 +67,7 @@ const Navbar = () => {
                       : "hover:text-blue-500"
                   }`
                 }
-                to="/allclases"
+                to="/add-task"
               >
                 Add Task
               </NavLink>
@@ -103,7 +103,7 @@ const Navbar = () => {
                     : "hover:text-blue-500"
                 }`
               }
-              to="/allclases"
+              to="/add-task"
             >
               Add Task
             </NavLink>
