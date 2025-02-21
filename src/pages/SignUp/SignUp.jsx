@@ -63,7 +63,9 @@ const SignUp = () => {
   const handleGoogleSignIn = async () => {
     try {
       //User Registration using google
-      await signInWithGoogle();
+      const data = await signInWithGoogle();
+      // save user info in db if the user is new
+      await saveUser(data?.user);
 
       Swal.fire({
         title: "Success!",
@@ -79,11 +81,11 @@ const SignUp = () => {
     }
   };
   return (
-    <div className="flex justify-center items-center min-h-screen bg-white">
+    <div className="flex justify-center items-center min-h-screen bg-white my-6">
       <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-4xl font-bold">Sign Up</h1>
-          <p className="text-sm text-gray-400">Welcome to Hans Aeggy Arts</p>
+          <p className="text-sm text-slate-800">Welcome to Task Master App</p>
         </div>
         <form
           onSubmit={handleSubmit}
@@ -101,7 +103,7 @@ const SignUp = () => {
                 name="name"
                 id="name"
                 placeholder="Enter Your Full Name Here"
-                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-amber-500 bg-gray-200 text-gray-900"
+                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-blue-500 bg-gray-200 text-gray-900"
                 data-temp-mail-org="0"
               />
             </div>
@@ -127,7 +129,7 @@ const SignUp = () => {
                 id="email"
                 required
                 placeholder="Enter Your Email Here"
-                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-amber-500 bg-gray-200 text-gray-900"
+                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-blue-500 bg-gray-200 text-gray-900"
                 data-temp-mail-org="0"
               />
             </div>
@@ -144,7 +146,7 @@ const SignUp = () => {
                 id="password"
                 required
                 placeholder="*******"
-                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-amber-500 bg-gray-200 text-gray-900"
+                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-blue-500 bg-gray-200 text-gray-900"
               />
             </div> */}
             <div className="relative">
@@ -177,7 +179,7 @@ const SignUp = () => {
           <div>
             <button
               type="submit"
-              className="bg-amber-500 w-full rounded-md py-3 text-white"
+              className="bg-blue-500 w-full rounded-md py-3 text-white"
             >
               {loading ? (
                 <TbFidgetSpinner className="animate-spin m-auto" />
@@ -206,7 +208,7 @@ const SignUp = () => {
           Already have an account?{" "}
           <Link
             to="/login"
-            className="hover:underline hover:text-amber-500 text-gray-600"
+            className="hover:underline hover:text-blue-500 text-gray-600"
           >
             Login
           </Link>

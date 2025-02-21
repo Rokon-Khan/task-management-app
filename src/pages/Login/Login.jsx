@@ -2,6 +2,7 @@ import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 import { TbFidgetSpinner } from "react-icons/tb";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { saveUser } from "../../api/saveUser";
 import LoadingSpinner from "../../components/Shared/LoadingSpinner";
 import useAuth from "../../hooks/useAuth";
 
@@ -35,7 +36,9 @@ const Login = () => {
   const handleGoogleSignIn = async () => {
     try {
       //User Registration using google
-      await signInWithGoogle();
+      const data = await signInWithGoogle();
+      // save user info in db if the user is new
+      await saveUser(data?.user);
       navigate(from, { replace: true });
       toast.success("Login Successful");
     } catch (err) {
@@ -44,7 +47,7 @@ const Login = () => {
     }
   };
   return (
-    <div className="flex justify-center items-center min-h-screen bg-white">
+    <div className="flex justify-center items-center min-h-screen bg-white my-6">
       <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-4xl font-bold">Log In</h1>
@@ -69,7 +72,7 @@ const Login = () => {
                 id="email"
                 required
                 placeholder="Enter Your Email Here"
-                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-amber-500 bg-gray-200 text-gray-900"
+                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-blue-500 bg-gray-200 text-gray-900"
                 data-temp-mail-org="0"
               />
             </div>
@@ -86,7 +89,7 @@ const Login = () => {
                 id="password"
                 required
                 placeholder="*******"
-                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-amber-500 bg-gray-200 text-gray-900"
+                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-blue-500 bg-gray-200 text-gray-900"
               />
             </div>
           </div>
@@ -94,7 +97,7 @@ const Login = () => {
           <div>
             <button
               type="submit"
-              className="bg-amber-500 w-full rounded-md py-3 text-white"
+              className="bg-blue-500 w-full rounded-md py-3 text-white"
             >
               {loading ? (
                 <TbFidgetSpinner className="animate-spin m-auto" />
@@ -105,7 +108,7 @@ const Login = () => {
           </div>
         </form>
         <div className="space-y-1">
-          <button className="text-xs hover:underline hover:text-amber-500 text-gray-400">
+          <button className="text-xs hover:underline hover:text-blue-500 text-gray-400">
             Forgot password?
           </button>
         </div>
@@ -128,7 +131,7 @@ const Login = () => {
           Don&apos;t have an account yet?{" "}
           <Link
             to="/sign-up"
-            className="hover:underline hover:text-amber-500 text-gray-600"
+            className="hover:underline hover:text-blue-500 text-gray-600"
           >
             Sign up
           </Link>
