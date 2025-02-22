@@ -7,7 +7,7 @@ Here’s a well-structured **README** file for your **SCIC-10 Job Task Assignmen
 🚀 **Live Demo**: [Task Management App](https://task-management-web-app.surge.sh)  
 
 ## 📌 Introduction  
-**EduManagement** is a comprehensive **Class Management System** designed to streamline educational workflows for teachers and students. This web-based platform offers an intuitive interface for managing classes, assignments, and student progress while providing real-time updates and secure authentication.  
+**Task Managemen Appt** is a comprehensive **Task Management System** designed to streamline educational workflows for teachers and students. This web-based platform offers an intuitive interface for managing classes, assignments, and student progress while providing real-time updates and secure authentication.  
 
 The app integrates **JWT authentication**, **Firebase authentication**, and **MongoDB CRUD operations** to ensure a **secure** and **efficient** task management experience.  
 
