@@ -27,16 +27,26 @@ The app integrates **JWT authentication**, **Firebase authentication**, and **Mo
 
 ## ✨ Features  
 
-✅ **Secure Authentication** – Firebase authentication with email/password and social media login.  
-✅ **Role-Based Dashboard** – Different functionalities for students and teachers.  
-✅ **Class Creation & Enrollment** – Teachers can create/manage classes; students can browse/enroll.  
-✅ **Assignment Management** – Teachers can assign, update, and grade assignments; students can submit their work.  
-✅ **Real-Time Data Updates** – Track progress, submissions, and deadlines in real time.  
-✅ **Responsive UI** – Fully optimized for mobile, tablet, and desktop usage.  
-✅ **Secure Data Storage** – Uses MongoDB with JWT tokens for secure sessions.  
-✅ **Popular Classes Section** – Highlights trending or high-enrollment courses.  
-✅ **Multi-Device Access** – Seamless synchronization across devices.  
-✅ **Secure Payment System** – Integrated with React for handling transactions securely.  
+Here’s the updated **Features** section specifically for your **Task Management App**:  
+
+---
+
+## ✨ Features  
+
+✅ **User Authentication** – Secure login system with Firebase authentication using email/password and social media login.  
+✅ **Task Creation & Assignment** – Users can create, assign, and manage tasks efficiently.  
+✅ **Real-Time Task Updates** – Instantly track task progress, updates, and changes.  
+✅ **Role-Based Dashboard** – Different dashboards for admins, team members, and managers.  
+✅ **Task Prioritization** – Set priorities for tasks to manage workload effectively.  
+✅ **Deadline & Reminder System** – Automatic notifications and reminders for upcoming deadlines.  
+✅ **Task Collaboration** – Team members can comment, update status, and share progress.  
+✅ **Data Security & Authorization** – Uses MongoDB with JWT tokens for secure access.  
+✅ **Multi-Device Support** – Works seamlessly across desktops, tablets, and mobile devices.  
+✅ **Intuitive UI & User-Friendly Design** – Clean and responsive design for a smooth user experience.  
+
+---
+
+Let me know if you need any further refinements! 🚀
 
 ---
 
