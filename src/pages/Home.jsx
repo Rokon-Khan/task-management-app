@@ -1,9 +1,9 @@
-import TaskList from "./TaskList/TaskList";
+import ToDoManage from "./ToDoManage/ToDoManage";
 
 const Home = () => {
   return (
     <div>
-      <TaskList />
+      <ToDoManage />
     </div>
   );
 };
